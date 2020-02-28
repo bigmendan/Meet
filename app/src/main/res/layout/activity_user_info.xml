@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.UserInfoActivity">
+
+    <ImageView
+        android:id="@+id/mHeaderIv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp" />
+
+    <TextView
+        android:id="@+id/mNickTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mHeaderIv"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:padding="10dp" />
+
+
+    <!--    添加好友 -->
+    <TextView
+        android:id="@+id/mAddTv"
+        style="@style/Friend_style"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:onClick="onClick"
+        android:text="添加好友"
+        android:visibility="visible" />
+
+
+    <LinearLayout
+        android:id="@+id/isFriendL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/mSendMsgTv"
+            style="@style/Friend_style"
+            android:onClick="onClick"
+            android:text="发消息" />
+
+        <TextView
+            android:id="@+id/mSendVoiceTv"
+            style="@style/Friend_style"
+            android:layout_marginTop="5dp"
+            android:onClick="onClick"
+            android:text="发语音" />
+
+        <TextView
+            android:id="@+id/mSendVideoTv"
+            style="@style/Friend_style"
+            android:layout_marginTop="5dp"
+            android:onClick="onClick"
+            android:text="发视频" />
+    </LinearLayout>
+
+
+</RelativeLayout>
